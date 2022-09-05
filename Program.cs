@@ -20,7 +20,8 @@ namespace cs_con_create_directory
                 DirectoryInfo di = Directory.CreateDirectory(path);
                 Console.WriteLine($"The directory was created successfully at {Directory.GetCreationTime(path)}." );
 
-                di.Delete();
+                // di.Delete();
+                Directory.Delete(path);
                 Console.WriteLine("The directory was deleted successfully.");
             }
             catch (Exception e)
